@@ -1,0 +1,84 @@
+1- Basics of Pandas: Introduction to the library and its capabilities in data handling.
+2- File Operations: Detailed instructions on reading and writing CSV, Excel, and JSON files.
+3- Practical Applications: Use cases in real-world scenarios to enhance your learning experience.
+4- Advanced Techniques: Tips on encoding, managing large datasets, and more.
+
+
+
+
+1 colum,row 
+2. whatb tye of data
+3. missing data
+
+info()
+
+method
+
+no. of rows and colums
+column
+int64 float64 object
+non null counts
+
+---------------------------------------
+
+Step 5
+1 select the specific colums
+2 fiters rows
+3 combine multiple conditions
+
+1 square brackets
+2 boolean conditions
+
+selecting colums
+1-  a series
+2- dataframe multiple colums of data
+
+column = df["columnname']
+subtset = df["col1","col2"]
+
+
+filtering rows
+1 - boolean indexing
+
+based on single conditions
+filtered_rows = df[df["salaru"]>50000]
+
+Combined multiple conditions
+filtered_rows = df[(df["salary"]>50000) & (df["salary"]<>>80000)]
+
+
+------------------------------------------------------------------
+
+step 6
+
+
+
+------------------------------------
+
+missing data:-
+
+NaN Not a Number
+None - (for object data types)
+
+
+----------------------------------
+
+interpolation
+
+10
+20
+30
+40
+50
+
+linear
+
+1- preserve data intergrity
+2- smooth trends
+3- avod data loss
+
+interpolate()
+
+
+
+

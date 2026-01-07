@@ -1,0 +1,173 @@
+Got you 🙂 Here’s a **clean, practical cheat-sheet of the most important Pandas commands** you’ll use *all the time* when working with Python DataFrames. This is perfect if you’re learning or just want a quick reference.
+
+---
+
+## 1️⃣ Importing Pandas
+
+```python
+import pandas as pd
+```
+
+---
+
+## 2️⃣ Creating & Loading DataFrames
+
+```python
+df = pd.DataFrame(data)
+df = pd.read_csv("file.csv")
+df = pd.read_excel("file.xlsx")
+df = pd.read_json("file.json")
+```
+
+---
+
+## 3️⃣ Viewing Data
+
+```python
+df.head()        # First 5 rows
+df.tail()        # Last 5 rows
+df.sample()      # Random rows
+df.info()        # Structure & data types
+df.describe()    # Statistics
+df.shape         # (rows, columns)
+df.columns       # Column names
+df.index         # Index info
+```
+
+---
+
+## 4️⃣ Selecting Data
+
+```python
+df['column']                 # Single column
+df[['col1', 'col2']]         # Multiple columns
+df.loc[row, col]             # Label-based selection
+df.iloc[row, col]            # Index-based selection
+df.at[row, col]              # Fast single value
+df.iat[row, col]             # Fast index-based
+```
+
+---
+
+## 5️⃣ Filtering Rows
+
+```python
+df[df['age'] > 18]
+df[(df['age'] > 18) & (df['city'] == 'NY')]
+df.query("age > 18 and city == 'NY'")
+```
+
+---
+
+## 6️⃣ Sorting
+
+```python
+df.sort_values('age')
+df.sort_values(['age', 'salary'], ascending=False)
+df.sort_index()
+```
+
+---
+
+## 7️⃣ Handling Missing Data
+
+```python
+df.isna()
+df.notna()
+df.dropna()
+df.fillna(0)
+df.fillna(method='ffill')
+```
+
+---
+
+## 8️⃣ Modifying Columns
+
+```python
+df['new_col'] = df['age'] * 2
+df.rename(columns={'old': 'new'})
+df.drop(columns=['col1'])
+df.astype({'age': int})
+```
+
+---
+
+## 9️⃣ Applying Functions
+
+```python
+df.apply(func)
+df['age'].apply(lambda x: x + 1)
+df.map(func)        # Series only
+df.applymap(func)  # Entire DataFrame
+```
+
+---
+
+## 🔟 Grouping & Aggregation
+
+```python
+df.groupby('city').mean()
+df.groupby('city')['salary'].sum()
+df.groupby('city').agg({'salary': 'mean', 'age': 'max'})
+```
+
+---
+
+## 1️⃣1️⃣ Merging & Joining
+
+```python
+pd.merge(df1, df2, on='id')
+pd.merge(df1, df2, how='left')
+df1.join(df2)
+pd.concat([df1, df2])
+```
+
+---
+
+## 1️⃣2️⃣ Removing Duplicates
+
+```python
+df.duplicated()
+df.drop_duplicates()
+```
+
+---
+
+## 1️⃣3️⃣ Value Counts & Unique Values
+
+```python
+df['city'].value_counts()
+df['city'].unique()
+df['city'].nunique()
+```
+
+---
+
+## 1️⃣4️⃣ Exporting Data
+
+```python
+df.to_csv("output.csv", index=False)
+df.to_excel("output.xlsx", index=False)
+df.to_json("output.json")
+```
+
+---
+
+## ⭐ Bonus (Super Useful)
+
+```python
+df.copy()
+df.reset_index()
+df.set_index('id')
+df.transpose()
+```
+
+---
+
+If you want, I can:
+
+* make a **1-page printable cheat sheet**
+* explain **real-world examples**
+* help you practice with **sample datasets**
+
+Just tell me 👍
